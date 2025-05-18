@@ -1,90 +1,133 @@
-# DotFiles
+# 🛠️ My Dotfiles
 
-## My VScode Vim
+A minimal yet powerful dotfiles setup built for speed, clarity, and productivity for **VSCode**, **Neovim**, **tmux**, **Ghostty** and **Alacritty**.
 
-if you are copying entire settings.json; make sure you have these extensions installed.
+This repo brings together:
 
-1. Vim
-2. Tabler Product Icons
-3. Catppuccin for VSCode
-4. Symbols
-5. prettier - Code formatter
+- ⚡ VSCode with Vim keybindings
+- 🧠 Fully tuned Neovim config (Lua-based)
+- ⌨️ Tmux workflow
+- 🖼️ Custom wallpapers
+- 🖋️ Nerd Fonts
+- 🧳 Terminal configs: Ghostty & Alacritty
 
-copy my `settings.json` and `keybinds.json` to your vscode; and you are set 📫
-
-### 1. Navigation
-
-> **ℹ️ Info**
-> 
-> [N] - Normal Mode  
-> [V] - Visual Mode  
-> [I] - Insert Mode
-
-
-- `ctrl + h/l/k/j` » [N] navigate left/right/up/down (I mostly used when using splits or when explorer is open)
-- `ctrl + e` » [N] toggle file explorer
-- `tab` » [N] switch to next tab
-- `shift + tab` » [N] switch to previous tab
-- `shift + j/k` » [V] move line up/down
-- `shift + k` » [N] showHover
-- `space + c + a` » [N] code action
-- `space + c + r` » [N] rename
-- `space + c + s` » [N] go to symbol
-- `space + b + d` » [N] close active buffer
-- `space + b + o` » [N] close all other buffers
-- `space + space` » [N] quick Open
-- `space + g + d` » [N] reveal definition
-- `ctrl + m` » [N] toggle Fold
-- `space + g + r` » [N] go to references
-- `space + f + f` » [N] find in files
-- `space + g + g` » [N] git
-- `ctrl + n` » [N] add selection to next find match
-
-- `j + j` » [I] remap to `esc`
-
-### 2. Explorer (when in focus)
-
-- `r` » rename file
-- `c` » copy file
-- `p` » paste file
-- `d` » delete file
-- `x` » cut file
-- `a` » new file
-- `shift + a` » new folder
-- `s` » open to side(vsplit)
-- `shift + s` » open to down(hsplit)
-
-I use system clipboard to copy and paste.
-I disabled some ctrl keys for vim (like ctrl+c, ctrl+a, ctrl+p); so i can use vscode keybinding for ctrl
+> [!NOTE]
+>
+> As of now, My daily Drivers for coding is Ghostty (terminal) and VSCode (code editor).
 
 ---
 
-you can use NeoVim at its core with my config (below).
+## 📦 What's Inside
 
-## How to setup neovim with my Nvim config
+| Component      | Description |
+|----------------|-------------|
+| `nvim/`        | Full Neovim config with Treesitter, LSPs, fuzzy finding, and more |
+| `vscode/`      | `settings.json` and `keybindings.json` with Vim mode and ergonomic keymaps |
+| `tmux/`        | Minimal `.tmux.conf` with sane defaults |
+| `alacritty/`   | Themed terminal config (Catppuccin + Nerd Font support) |
+| `ghostty/`     | My Ghostty configuration for Mac/Linux |
+| `fonts/`       | Nerd Font files used across the setup |
+| `wallpapers/`  | Clean and aesthetic wallpapers I use |
+| `scripts/`     | Optional helper scripts to bootstrap or symlink config files (if included) |
 
-### Requirements
+---
 
-- Neovim >= **0.9.0** (needs to be built with **LuaJIT**)
-- Git >= **2.19.0** (for partial clones support)
-- a [Nerd Font](https://www.nerdfonts.com/)
-- a **C** compiler for `nvim-treesitter`. See [here](https://github.com/nvim-treesitter/nvim-treesitter#requirements)
+## 🧠 My VSCode + Vim Setup
 
-### FOLLOW THIS STEPS
+A minimalist yet powerful configuration that brings the best of **Vim** keybindings to **VSCode**, and a fully-loaded **Neovim** environment for power users.
 
-1. Clone this repository
-2. use this command
+This setup is optimized for developers who want fast navigation, distraction-free UI, and ergonomic keybindings — with sensible defaults.
+
+If you're using VSCode with Vim mode, here’s what you need for a clean and productive workflow.
+
+### 🔌 Required Extensions
+
+Ensure the following extensions are installed:
+
+1. [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
+2. [Tabler Product Icons](https://marketplace.visualstudio.com/items?itemName=zguolee.tabler-icons)
+3. [Catppuccin for VSCode](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
+4. [Symbols](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols)
+5. [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+> [!NOTE]
+> Once installed, copy `settings.json` and `keybindings.json` from this repo into your VSCode `User` folder.
+
+---
+
+### 🧭 Keybindings Cheatsheet
+
+> `[N]` – Normal Mode  
+> `[V]` – Visual Mode  
+> `[I]` – Insert Mode
+
+#### 🚀 Navigation
+
+| Shortcut | Mode | Action |
+|---------|------|--------|
+| `Ctrl + h/l/j/k` | [N] | Move between splits or editor windows |
+| `Ctrl + e` | [N] | Toggle File Explorer |
+| `Tab / Shift + Tab` | [N] | Switch tabs forward/backward |
+| `Shift + j/k` | [V] | Move selected lines up/down |
+| `Shift + k` | [N] | Show hover |
+| `Space + c + a` | [N] | Code action |
+| `Space + c + r` | [N] | Rename symbol |
+| `Space + c + s` | [N] | Go to symbol |
+| `Space + b + d/o` | [N] | Close active / other buffers |
+| `Space + Space` | [N] | Quick Open |
+| `Space + g + d/r/g` | [N] | Go to definition / references / Git |
+| `Ctrl + m` | [N] | Toggle fold |
+| `Ctrl + n` | [N] | Add selection to next find match |
+| `j + j` | [I] | Escape to Normal mode |
+
+---
+
+### 🗂️ File Explorer
+
+When the explorer panel is focused:
+
+| Key | Action |
+|-----|--------|
+| `r` | Rename file |
+| `c` | Copy file |
+| `p` | Paste file |
+| `d` | Delete file |
+| `x` | Cut file |
+| `a / Shift + a` | New file / folder |
+| `s / Shift + s` | Open in vertical / horizontal split |
+
+> [!NOTE]
+> Some `Ctrl` keys like `Ctrl+C`, `Ctrl+A`, `Ctrl+P` are intentionally disabled in Vim mode to use VSCode-native bindings.
+
+---
+
+## 🧪 Neovim Configuration
+
+Want full Vim power? You can use my **Neovim** setup as a complete development environment.
+
+### 🛠 Requirements
+
+- **Neovim** `>= 0.9.0` (compiled with LuaJIT)
+- **Git** `>= 2.19.0` (for partial clone support)
+- A [Nerd Font](https://www.nerdfonts.com/)
+- A working **C compiler** (required by `nvim-treesitter`)
+
+---
+
+### 🔧 Setup Steps
 
 ```bash
-# cd into cloned repository
+# Clone this repository
+git clone https://github.com/nikharx/dotfiles.git
+
+# Navigate into the directory
 cd dotfiles
 
-# backup your cofig (if you have one)
-mv ~/.config/nvim{,.bak}
+# Backup your current Neovim config (if any)
+mv ~/.config/nvim ~/.config/nvim.bak
 
-# copy my nvim config files
-cp ./nvim -r ~/.config/nvim
+# Copy my config
+cp -r ./nvim ~/.config/nvim
 
-# run neovim
+# Launch Neovim
 nvim
-```
