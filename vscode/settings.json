@@ -1,0 +1,110 @@
+{
+    // Editor settings
+    "editor.fontFamily": "Geist Mono, 'Droid Sans Mono', 'monospace', monospace",
+    "editor.lineHeight": 1.5,
+    "editor.fontSize": 16,
+    "editor.tabSize": 4,
+    "editor.mouseWheelZoom": true,
+    "editor.renderWhitespace": "none",
+    "editor.wordWrap": "on",
+    "editor.cursorBlinking": "smooth",
+    "editor.smoothScrolling": true,
+    "editor.fontLigatures": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.occurrencesHighlight": "off",
+    "editor.stickyScroll.enabled": false,
+    "editor.scrollbar.verticalScrollbarSize": 8,
+    "editor.linkedEditing": true,
+    "editor.minimap.autohide": true,
+    "editor.minimap.showSlider": "always",
+
+    // Explorer settings
+    "explorer.compactFolders": false,
+    "explorer.confirmPasteNative": false,
+    "explorer.decorations.badges": false,
+    "explorer.decorations.colors": false,
+
+    // Window settings
+    "window.menuBarVisibility": "toggle",
+    "window.customTitleBarVisibility": "auto",
+    "window.commandCenter": false,
+    "window.titleBarStyle": "custom",
+
+    // Workbench settings
+    "workbench.layoutControl.enabled": false,
+    "workbench.productIconTheme": "Tabler",
+    "workbench.iconTheme": "symbols",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.editor.decorations.badges": false,
+
+    // Prettier settings
+    "prettier.printWidth": 200,
+
+    // Git Diff decoration
+    "scm.diffDecorations": "gutter",
+
+    // catppuccin theme settings
+    "catppuccin.accentColor": "lavender",
+    "catppuccin.boldKeywords": true,
+    "catppuccin.bracketMode": "neovim",
+    "catppuccin.colorOverrides": {
+        "all": {
+            "base": "#1a1b26", // editor
+            "crust": "#16161f",
+            "mantle": "#16161f", // sidebar etc.
+            "surface0": "#24283b", // input bg, hover, active state etc.
+            "surface1": "#24283b", // inactive indent guide, menu hover active state, input bg etc.
+            "surface2": "#414868", // active indent guide, scrollbar, settings border etc.
+            "overlay2": "#565f89", // comments, quotes, comma, etc.
+            "overlay1": "#565f89",
+            "subtext0": "#9aa5ce", // minor icons etc.
+            "lavender": "#9aa5ce", // using base color
+            "text": "#a9b1d6",
+            "blue": "#80a5f6"
+        }
+    },
+    "catppuccin.extraBordersEnabled": true,
+    "catppuccin.workbenchMode": "flat",
+
+    // VIM SETTINGS
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.foldfix": true,
+    "vim.visualstar": true,
+    "vim.textwidth": 200,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        // REPEATABLE INDENTING
+        {
+            "before": [">"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // PASTE WITHOUT OVERRIDING THE CURRENT REGISTER
+        {
+            "before": ["p"],
+            "after": ["p", "g", "v", "y"]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-y>": false,
+        "<C-p>": false
+    },
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    }
+}
