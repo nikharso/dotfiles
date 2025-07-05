@@ -1,0 +1,12 @@
+# List of extensions
+- Tailwind CSS IntelliSense
+- Auto Rename Tag
+- Catppuccin Noctic Icons
+- Code spell checker
+- Color Highlight
+- ES7+ React/Redux/React-Native snippets
+- gitgraph
+- Rośe Pine
+- Tabler Icons
+- Todo highlight
+- Vim
