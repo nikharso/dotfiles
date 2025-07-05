@@ -16,17 +16,17 @@
         "command": "workbench.action.navigateDown"
     },
     {
-        "key": "space b b",
+        "key": "space e",
         "command": "workbench.action.showAllEditors",
         "when": "vim.mode == 'Normal' &&  (editorTextFocus || !inputFocus)"
     },
     {
-        "key": "ctrl-e",
+        "key": "cmd-e",
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && filesExplorerFocus"
     },
     {
-        "key": "ctrl-e",
+        "key": "cmd-e",
         "command": "workbench.files.action.focusFilesExplorer",
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !filesExplorerFocus"
     },
@@ -63,11 +63,6 @@
     {
         "key": "space c r",
         "command": "editor.action.rename",
-        "when": "vim.mode == 'Normal' && editorTextFocus"
-    },
-    {
-        "key": "space c s",
-        "command": "workbench.action.gotoSymbol",
         "when": "vim.mode == 'Normal' && editorTextFocus"
     },
     {
@@ -167,5 +162,28 @@
             "commands": ["workbench.action.splitEditorDown", "explorer.openAndPassFocus", "workbench.action.closeOtherEditors"]
         },
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "cmd+e",
+        "command": "-actions.findWithSelection"
+    },
+    {
+        "key": "cmd+t",
+        "command": "-workbench.action.showAllSymbols"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
     }
 ]
