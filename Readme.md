@@ -24,11 +24,8 @@ This repo brings together:
 | `nvim/`        | Full Neovim config with Treesitter, LSPs, fuzzy finding, and more |
 | `vscode/`      | `settings.json` and `keybindings.json` with Vim mode and ergonomic keymaps |
 | `tmux/`        | Minimal `.tmux.conf` with sane defaults |
-| `alacritty/`   | Themed terminal config (Catppuccin + Nerd Font support) |
 | `ghostty/`     | My Ghostty configuration for Mac/Linux |
 | `fonts/`       | Nerd Font files used across the setup |
-| `wallpapers/`  | Clean and aesthetic wallpapers I use |
-| `scripts/`     | Optional helper scripts to bootstrap or symlink config files (if included) |
 
 ---
 
