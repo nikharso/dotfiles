@@ -115,7 +115,7 @@ Want full Vim power? You can use my **Neovim** setup as a complete development e
 
 ```bash
 # Clone this repository
-git clone https://github.com/nikharx/dotfiles.git
+git clone https://github.com/nikharso/dotfiles.git
 
 # Navigate into the directory
 cd dotfiles
