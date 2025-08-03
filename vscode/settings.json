@@ -1,104 +1,72 @@
 {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.fontFamily": "dank mono, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 16,
-    "editor.lineHeight": 1.5,
-    "editor.linkedEditing": true,
-    "editor.minimap.autohide": true,
-    "editor.minimap.showSlider": "always",
-    "editor.mouseWheelZoom": true,
-    "editor.occurrencesHighlight": "off",
-    "editor.renderWhitespace": "none",
-    "editor.stickyScroll.enabled": false,
-    "editor.tabSize": 4,
-    "explorer.compactFolders": false,
-    "explorer.confirmPasteNative": false,
-    "explorer.decorations.colors": false,
-    "scm.diffDecorations": "gutter",
-    "[css]": {
-        "editor.defaultFormatter": "vscode.css-language-features"
-    },
-    "prettier.printWidth": 128,
-    "window.commandCenter": false,
-    "window.title": "${dirty}${activeEditorShort}${separator}${folderName}",
-    "window.zoomLevel": 0.7,
-    "workbench.colorCustomizations": {
-        "[Rosé Pine (no italics)]": {
-            "editorCursor.foreground": "#eacfce",
-            "editorCursor.background": "#21022a"
-        }
-    },
-    "workbench.colorTheme": "Rosé Pine (no italics)",
-    "workbench.editor.decorations.badges": false,
-    "workbench.iconTheme": "symbols",
-    "workbench.productIconTheme": "Tabler",
-    "vim.easymotion": true,
-    "vim.foldfix": true,
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-f>": false,
-        "<C-p>": false,
-        "<C-y>": false
-    },
-    "vim.incsearch": true,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.leader": "<space>",
-    "vim.textwidth": 200,
-    "vim.useSystemClipboard": true,
-    "vim.visualModeKeyBindings": [
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "p"
-            ],
-            "after": [
-                "p",
-                "g",
-                "v",
-                "y"
-            ]
-        }
-    ],
-    "vim.visualstar": true,
-    "extensions.experimental.affinity": {
-        "vscodevim.vim": 1
-    },
-    "catppuccin-noctis-icons.hidesExplorerArrows": false,
-    "editor.minimap.renderCharacters": false,
-    "transparent-win.transparency": 0.3,
-    "cursor.cpp.disabledLanguages": [
-        "plaintext",
-        "markdown",
-        "scminput"
-    ],
-    "terminal.integrated.fontSize": 15,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "workbench.activityBar.orientation": "vertical"
+  // GOOD STUFF
+  "vim.leader": "<space>",
+  "vim.foldfix": true,
+  "vim.textwidth": 200,
+  "vim.useSystemClipboard": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-p>": false,
+    "<C-y>": false
+  },
+  "vim.insertModeKeyBindings": [{ "before": ["j", "j"], "after": ["<Esc>"] }],
+  "vim.normalModeKeyBindings": [
+    { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
+    { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
+    { "before": ["n"], "after": ["n", "z", "z"] },
+    { "before": ["N"], "after": ["N", "z", "z"] }
+  ],
+  "vim.visualModeKeyBindings": [
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["p"], "after": ["p", "g", "v", "y"] }
+  ],
+  "extensions.experimental.affinity": { "vscodevim.vim": 1 },
+
+  // JUST HAVE IT...
+  "editor.lineNumbers": "relative",
+  "editor.wordWrap": "on",
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "catppuccin noctis icons",
+  "workbench.activityBar.location": "top",
+  "workbench.editor.showTabs": "single",
+  "workbench.productIconTheme": "Tabler",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 15,
+  "editor.lineHeight": 1.6,
+  "editor.fontWeight": "200",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.linkedEditing": true,
+  "editor.minimap.autohide": true,
+  "editor.minimap.showSlider": "always",
+  "editor.occurrencesHighlight": "off",
+  "editor.renderWhitespace": "none",
+  "editor.renderLineHighlight": "all",
+  // "editor.glyphMargin": false,
+  "editor.suggestLineHeight": 26,
+  "terminal.integrated.lineHeight": 1.1,
+  "editor.stickyScroll.enabled": false,
+  "explorer.compactFolders": false,
+  "explorer.confirmPasteNative": false,
+  "workbench.editor.decorations.badges": false,
+  "explorer.decorations.colors": false,
+  "scm.diffDecorations": "overview",
+  "window.title": "${dirty}${activeEditorShort}${separator}${folderName}",
+  "window.zoomLevel": 1,
+  "catppuccin-noctis-icons.hidesExplorerArrows": true,
+  "terminal.integrated.fontSize": 13,
+  "workbench.colorCustomizations": {
+    "editor.findMatchBackground": "#593b48",
+    "editor.findMatchBorder": "#ed879633",
+    "editor.findMatchHighlightBackground": "#3e535f",
+    "editor.findMatchHighlightBorder": "#91d7e333",
+    "editor.findRangeHighlightBackground": "#3e535f",
+    "editor.findRangeHighlightBorder": "#91d7e333",
+    "editor.focusedStackFrameHighlightBackground": "#a6da9526"
+  },
+  "workbench.sideBar.location": "right",
+  "workbench.panel.showLabels": false
 }
