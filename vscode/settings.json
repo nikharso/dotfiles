@@ -1,72 +1,152 @@
 {
-  // GOOD STUFF
+  /*
+  ---------------------------------------
+  EDITOR APPEARANCE & BEHAVIOR
+  ---------------------------------------
+  */
+  "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.lineNumbers": "relative",
+  "editor.wordWrap": "on",
+  "editor.fontSize": 13,
+  "editor.lineHeight": 1.6,
+  "editor.suggestFontSize": 13,
+  "editor.suggestLineHeight": 25,
+  "editor.fontLigatures": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.linkedEditing": true,
+  "editor.minimap.autohide": "mouseover",
+  "editor.minimap.showSlider": "always",
+  "editor.occurrencesHighlight": "off",
+  "editor.renderWhitespace": "none",
+  "editor.renderLineHighlight": "all",
+  "editor.stickyScroll.enabled": false,
+  "editor.cursorSurroundingLines": 10,
+  "editor.fontFamily": "Dank Mono",
+
+  /*
+  ---------------------------------------
+  TERMINAL SETTINGS
+  ---------------------------------------
+  */
+  "terminal.integrated.lineHeight": 1.1,
+  "terminal.integrated.fontSize": 13,
+
+  /*
+  ---------------------------------------
+  WORKBENCH & UI
+  ---------------------------------------
+  */
+  "workbench.list.smoothScrolling": true,
+  "workbench.settings.editor": "json",
+  "workbench.iconTheme": "catppuccin noctis icons",
+  "workbench.productIconTheme": "Tabler",
+  "workbench.editor.decorations.badges": false,
+  "workbench.editor.showTabs": "single",
+  "workbench.panel.showLabels": false,
+  "workbench.colorTheme": "Everforest Dark",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 10,
+  "explorer.compactFolders": false,
+  "explorer.confirmPasteNative": false,
+  "explorer.decorations.colors": false,
+  "breadcrumbs.enabled": false,
+  "window.title": "🏗️ ${activeEditorShort} | ${folderName}",
+  // "window.density.editorTabHeight": "compact",
+  "window.commandCenter": false,
+
+  /*
+  ---------------------------------------
+  ICONS / THEMES (EXTENSIONS)
+  ---------------------------------------
+  */
+  "catppuccin-noctis-icons.hidesExplorerArrows": true,
+  /*
+
+  ---------------------------------------
+  CUSTOM UI STYLES (EXTENSIONS)
+  ---------------------------------------
+  */
+  "custom-ui-style.font.sansSerif": "Dank Mono",
+  "custom-ui-style.stylesheet": {
+    ".monaco-workbench .part .title .title-label": "padding-left: 0px !important;"
+  },
+
+  /*
+  ---------------------------------------
+  FIND / SEARCH HIGHLIGHT COLORS
+  ---------------------------------------
+  */
+  "workbench.colorCustomizations": {
+    "editorCursor.background": "#222",
+    "editorCursor.foreground": "#eee",
+    "editor.findMatchBackground": "#593b48",
+    "editor.findMatchBorder": "#ed879633",
+    "editor.findMatchHighlightBackground": "#3e535fee",
+    "editor.findMatchHighlightBorder": "#91d7e333",
+    "editor.findRangeHighlightBackground": "#3e535fee",
+    "editor.findRangeHighlightBorder": "#91d7e333",
+    "editor.focusedStackFrameHighlightBackground": "#a6da9526"
+  },
+
+  /*
+  ---------------------------------------
+  REFERENCES & DATABASE CLIENT
+  ---------------------------------------
+  */
+  "references.preferredLocation": "view",
+  "database-client.autoSync": true,
+
+  /*
+  ---------------------------------------
+  VIM EXTENSION SETTINGS
+  ---------------------------------------
+  */
+  "vim.enableNeovim": true,
   "vim.leader": "<space>",
   "vim.foldfix": true,
   "vim.textwidth": 200,
   "vim.useSystemClipboard": true,
+
+  // HandleKeys (delegate to VSCode instead of Vim)
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false,
     "<C-p>": false,
     "<C-y>": false
   },
+
+  // Insert Mode Mappings
   "vim.insertModeKeyBindings": [{ "before": ["j", "j"], "after": ["<Esc>"] }],
+
+  // Normal Mode Mappings
   "vim.normalModeKeyBindings": [
     { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
     { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
     { "before": ["n"], "after": ["n", "z", "z"] },
     { "before": ["N"], "after": ["N", "z", "z"] }
   ],
+
+  // Visual Mode Mappings
   "vim.visualModeKeyBindings": [
     { "before": [">"], "commands": ["editor.action.indentLines"] },
     { "before": ["<"], "commands": ["editor.action.outdentLines"] }
   ],
+
+  // Visual Mode Non-Recursive
   "vim.visualModeKeyBindingsNonRecursive": [
     { "before": ["p"], "after": ["p", "g", "v", "y"] }
   ],
-  "extensions.experimental.affinity": { "vscodevim.vim": 1 },
 
-  // JUST HAVE IT...
-  "editor.lineNumbers": "relative",
-  "editor.wordWrap": "on",
-  "workbench.colorTheme": "Tokyo Night",
-  "workbench.iconTheme": "catppuccin noctis icons",
-  "workbench.activityBar.location": "top",
-  "workbench.editor.showTabs": "single",
-  "workbench.productIconTheme": "Tabler",
-  "editor.fontFamily": "Fira Code",
-  "editor.fontSize": 15,
-  "editor.lineHeight": 1.6,
-  "editor.fontWeight": "200",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.linkedEditing": true,
-  "editor.minimap.autohide": true,
-  "editor.minimap.showSlider": "always",
-  "editor.occurrencesHighlight": "off",
-  "editor.renderWhitespace": "none",
-  "editor.renderLineHighlight": "all",
-  // "editor.glyphMargin": false,
-  "editor.suggestLineHeight": 26,
-  "terminal.integrated.lineHeight": 1.1,
-  "editor.stickyScroll.enabled": false,
-  "explorer.compactFolders": false,
-  "explorer.confirmPasteNative": false,
-  "workbench.editor.decorations.badges": false,
-  "explorer.decorations.colors": false,
-  "scm.diffDecorations": "overview",
-  "window.title": "${dirty}${activeEditorShort}${separator}${folderName}",
-  "window.zoomLevel": 1,
-  "catppuccin-noctis-icons.hidesExplorerArrows": true,
-  "terminal.integrated.fontSize": 13,
-  "workbench.colorCustomizations": {
-    "editor.findMatchBackground": "#593b48",
-    "editor.findMatchBorder": "#ed879633",
-    "editor.findMatchHighlightBackground": "#3e535f",
-    "editor.findMatchHighlightBorder": "#91d7e333",
-    "editor.findRangeHighlightBackground": "#3e535f",
-    "editor.findRangeHighlightBorder": "#91d7e333",
-    "editor.focusedStackFrameHighlightBackground": "#a6da9526"
+  // Extension Affinity (Performance)
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
   },
-  "workbench.sideBar.location": "right",
-  "workbench.panel.showLabels": false
+
+  /*
+  ---------------------------------------
+  LINTERS / LANGUAGE-SPECIFIC
+  ---------------------------------------
+  */
+  "css.lint.unknownAtRules": "ignore"
 }
