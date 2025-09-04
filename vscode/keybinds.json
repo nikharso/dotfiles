@@ -195,7 +195,7 @@
   {
     "key": "space f f",
     "command": "workbench.action.quickTextSearch",
-    "when": "vim.mode == 'Normal' || vim.mode == 'Visual'"
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
   },
 
   /*
