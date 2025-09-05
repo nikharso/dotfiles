@@ -8,7 +8,7 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.lineNumbers": "relative",
   "editor.wordWrap": "on",
-  "editor.fontSize": 13,
+  "editor.fontSize": 16,
   "editor.lineHeight": 1.6,
   "editor.suggestFontSize": 13,
   "editor.suggestLineHeight": 25,
@@ -42,7 +42,6 @@
   "workbench.iconTheme": "catppuccin noctis icons",
   "workbench.productIconTheme": "Tabler",
   "workbench.editor.decorations.badges": false,
-  "workbench.editor.showTabs": "single",
   "workbench.panel.showLabels": false,
   "workbench.colorTheme": "Everforest Dark",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
@@ -51,9 +50,10 @@
   "explorer.confirmPasteNative": false,
   "explorer.decorations.colors": false,
   "breadcrumbs.enabled": false,
-  "window.title": "🏗️ ${activeEditorShort} | ${folderName}",
+  "window.title": "🏗️ ${folderName}",
   // "window.density.editorTabHeight": "compact",
   "window.commandCenter": false,
+  "workbench.tree.enableStickyScroll": false,
 
   /*
   ---------------------------------------
@@ -68,9 +68,6 @@
   ---------------------------------------
   */
   "custom-ui-style.font.sansSerif": "Dank Mono",
-  "custom-ui-style.stylesheet": {
-    ".monaco-workbench .part .title .title-label": "padding-left: 0px !important;"
-  },
 
   /*
   ---------------------------------------
@@ -78,15 +75,28 @@
   ---------------------------------------
   */
   "workbench.colorCustomizations": {
-    "editorCursor.background": "#222",
-    "editorCursor.foreground": "#eee",
+    "editorCursor.background": "#2e3d46",
+    "editorCursor.foreground": "#b8d69a",
     "editor.findMatchBackground": "#593b48",
     "editor.findMatchBorder": "#ed879633",
     "editor.findMatchHighlightBackground": "#3e535fee",
     "editor.findMatchHighlightBorder": "#91d7e333",
     "editor.findRangeHighlightBackground": "#3e535fee",
     "editor.findRangeHighlightBorder": "#91d7e333",
-    "editor.focusedStackFrameHighlightBackground": "#a6da9526"
+    "editor.focusedStackFrameHighlightBackground": "#a6da9526",
+
+    "activityBar.border": "#3B4447",
+    "titleBar.border": "#3B4447",
+    "sideBar.border": "#3B4447",
+    "tab.border" : "#3B444799",
+    "statusBar.border": "#3B4447",
+    "editorGroup.border": "#3B4447",
+    "editorGroupHeader.tabsBorder": "#3B4447",
+    "panel.border": "#3B4447",
+    "editorGroupHeader.border": "#3B4444",
+    "statusBar.background": "#2E353A",
+    "editor.background": "#293136",
+    "activityBar.activeBackground": "#333C4388",
   },
 
   /*
@@ -95,7 +105,6 @@
   ---------------------------------------
   */
   "references.preferredLocation": "view",
-  "database-client.autoSync": true,
 
   /*
   ---------------------------------------
@@ -130,7 +139,7 @@
   // Visual Mode Mappings
   "vim.visualModeKeyBindings": [
     { "before": [">"], "commands": ["editor.action.indentLines"] },
-    { "before": ["<"], "commands": ["editor.action.outdentLines"] }
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
   ],
 
   // Visual Mode Non-Recursive
@@ -148,5 +157,6 @@
   LINTERS / LANGUAGE-SPECIFIC
   ---------------------------------------
   */
-  "css.lint.unknownAtRules": "ignore"
+  "css.lint.unknownAtRules": "ignore",
+  "workbench.editor.showTabs": "single"
 }
