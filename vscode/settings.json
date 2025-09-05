@@ -86,9 +86,11 @@
 
   /*
   ---------------------------------------
-  FIND / SEARCH HIGHLIGHT COLORS
+  WORKBENCH THEME CUSTOMIZATION
   ---------------------------------------
   */
+  "everforest.darkWorkbench": "flat",
+
   "workbench.colorCustomizations": {
     "editor.findMatchBackground": "#593b48",
     "editor.findMatchBorder": "#ed879633",
@@ -99,17 +101,13 @@
     "editor.focusedStackFrameHighlightBackground": "#a6da9526",
 
     "activityBar.border": "#3B4447",
-    "titleBar.border": "#3B4447",
     "sideBar.border": "#3B4447",
-    "tab.border": "#3B444799",
     "statusBar.border": "#3B4447",
     "editorGroup.border": "#3B4447",
     "editorGroupHeader.tabsBorder": "#3B4447",
     "panel.border": "#3B4447",
     "editorGroupHeader.border": "#3B4444",
-    "statusBar.background": "#2E353A",
     "editor.background": "#293136",
-    "activityBar.activeBackground": "#333C4388"
   },
 
   /*
@@ -159,6 +157,8 @@
       "before": ["leader", "e"],
       "commands": ["workbench.action.showAllEditorsByMostRecentlyUsed"]
     },
+
+    // FIND / REPLACE 
     {
       "before": ["leader", "f", "f"],
       "commands": ["workbench.action.quickTextSearch"]
@@ -171,6 +171,8 @@
       "before": ["<leader>", "f", "s"],
       "commands": ["workbench.action.findInFiles"]
     },
+
+    // FORMAT DOCUMENT
     {
       "before": ["<leader>", "f", "d"],
       "commands": ["editor.action.formatDocument"]
@@ -200,9 +202,15 @@
       "before": ["leader", "c", "s"],
       "commands": ["workbench.action.gotoSymbol"]
     },
+
+    // GO TO DEFINITION
     {
       "before": ["g", "d"],
       "commands": ["editor.action.goToDeclaration"]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
     },
     {
       "before": ["g", "r"],
@@ -228,6 +236,7 @@
 
   // Visual Mode Mappings
   "vim.visualModeKeyBindings": [
+    // INDENT / OUTDENT
     { "before": [">"], "commands": ["editor.action.indentLines"] },
     { "before": ["<"], "commands": ["editor.action.outdentLines"] },
 
@@ -238,6 +247,7 @@
 
   // Visual Mode Non-Recursive
   "vim.visualModeKeyBindingsNonRecursive": [
+    // PASTE WITHOUT OVERWRITING THE DEFAULT REGISTER
     { "before": ["p"], "after": ["p", "g", "v", "y"] }
   ],
 
