@@ -49,7 +49,7 @@
   {
     "key": "space b b",
     "command": "workbench.action.showAllEditorsByMostRecentlyUsed",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
 
   /*
@@ -130,6 +130,16 @@
   EDITOR ACTIONS
   ---------------------------------------
   */
+  {
+    "key": "shift-j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "vim.mode != 'Insert' && editorTextFocus"
+  },
+  {
+    "key": "shift-k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "vim.mode != 'Insert' && editorTextFocus"
+  },
   {
     "key": "shift-k",
     "command": "editor.action.showHover",
