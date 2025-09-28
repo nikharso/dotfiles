@@ -36,22 +36,32 @@
     "command": "workbench.action.previousEditorInGroup",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
   },
+  // {
+  //   "key": "space b d",
+  //   "command": "workbench.action.closeActiveEditor",
+  //       "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  // },
+  // {
+  //   "key": "cmd-b cmd-o",
+  //   "command": "workbench.action.closeOtherEditors",
+  //   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  // },
 
   /*
   ---------------------------------------
   EXPLORER / FILE MANAGEMENT
   ---------------------------------------
   */
-  {
-    "key": "cmd-e",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && filesExplorerFocus"
-  },
-  {
-    "key": "cmd-e",
-    "command": "workbench.files.action.focusFilesExplorer",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !filesExplorerFocus"
-  },
+  // {
+  //   "key": "space e",
+  //   "command": "workbench.action.toggleSidebarVisibility",
+  //   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && filesExplorerFocus"
+  // },
+  // {
+  //   "key": "space e",
+  //   "command": "workbench.files.action.focusFilesExplorer",
+  //   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !filesExplorerFocus"
+  // },
   {
     "key": "r",
     "command": "renameFile",
@@ -133,16 +143,68 @@
 
   /*
   ---------------------------------------
+  CODE NAVIGATION / ACTIONS
+  ---------------------------------------
+  */
+  // {
+  //   "key": "space c a",
+  //   "command": "editor.action.codeAction",
+  //   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  // },
+  // {
+  //   "key": "space c r",
+  //   "command": "editor.action.rename",
+  //   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  // },
+  // {
+  //   "key": "space c s",
+  //   "command": "workbench.action.gotoSymbol",
+  //   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  // },
+  // {
+  //   "key": "space g d",
+  //   "command": "editor.action.revealDefinition",
+  //   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  // },
+  // {
+  //   "key": "space g r",
+  //   "command": "editor.action.goToReferences",
+  //   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  // },
+
+  /*
+  ---------------------------------------
+  SEARCH & QUICK OPEN
+  ---------------------------------------
+  */
+  // {
+  //   "key": "space r",
+  //   "command": "workbench.action.showAllEditorsByMostRecentlyUsed",
+  //   "when": "vim.mode == 'Normal' &&  (editorTextFocus || !inputFocus)"
+  // },
+  // {
+  //   "key": "shift shift",
+  //   "command": "workbench.action.quickOpen",
+  //   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  // },
+  // {
+  //   "key": "shift shift",
+  //   "command": "workbench.action.quickTextSearch",
+  //   "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+  // },
+
+  /*
+  ---------------------------------------
   QUICK OPEN NAVIGATION
   ---------------------------------------
   */
   {
-    "key": "cmd+j",
+    "key": "ctrl+j",
     "command": "workbench.action.quickOpenSelectNext",
     "when": "inQuickOpen"
   },
   {
-    "key": "cmd+k",
+    "key": "ctrl+k",
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
   },
@@ -153,12 +215,12 @@
   ---------------------------------------
   */
   {
-    "key": "cmd+j",
+    "key": "ctrl+j",
     "command": "selectNextSuggestion",
     "when": "suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "cmd+k",
+    "key": "ctrl+k",
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetVisible && textInputFocus"
   },
@@ -186,6 +248,14 @@
   {
     "key": "alt+cmd+-",
     "command": "workbench.action.terminal.fontZoomOut",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\\\r\n"
+    },
     "when": "terminalFocus"
   }
 ]
