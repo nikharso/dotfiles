@@ -1,265 +1,74 @@
 {
-  /*
-  ---------------------------------------
-  TYPESCRIPTS & FORMATTING
-  ---------------------------------------
-  */
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "always"
-  },
-
-  /*
-  ---------------------------------------
-  EDITOR APPEARANCE & BEHAVIOR
-  ---------------------------------------
-  */
-  "editor.tabSize": 2,
-  "editor.smoothScrolling": true,
-  "editor.cursorSmoothCaretAnimation": "on",
+  "scm.diffDecorations": "gutter",
   "editor.lineNumbers": "relative",
   "editor.wordWrap": "on",
-  "editor.fontSize": 16,
-  "editor.fontLigatures": true,
+  "editor.fontSize": 13,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.linkedEditing": true,
-  "editor.minimap.autohide": "mouseover",
-  "editor.minimap.showSlider": "always",
+  // "workbench.activityBar.orientation": "vertical",
   "editor.occurrencesHighlight": "off",
   "editor.renderWhitespace": "none",
   "editor.stickyScroll.enabled": false,
   "editor.cursorSurroundingLines": 10,
   "editor.fontFamily": "Dank Mono",
-  "editor.suggest.insertMode": "replace",
-  "editor.cursorBlinking": "solid",
-  "editor.scrollBeyondLastLine": false,
-
-  /*
-  ---------------------------------------
-  TERMINAL SETTINGS
-  ---------------------------------------
-  */
-  "terminal.integrated.lineHeight": 1.1,
-  "terminal.integrated.fontSize": 13,
-  "terminal.integrated.enableVisualBell": true,
-  "accessibility.signals.terminalBell": {
-    "sound": "on"
-  },
-
-  /*
-  ---------------------------------------
-  WORKBENCH & UI
-  ---------------------------------------
-  */
-  "workbench.activityBar.location": "bottom",
-  "workbench.list.smoothScrolling": true,
-  "workbench.settings.editor": "json",
-  "workbench.iconTheme": "catppuccin noctis icons",
-  "workbench.productIconTheme": "Tabler",
-  "workbench.editor.decorations.badges": false,
-  "workbench.colorTheme": "Everforest Dark",
-  "workbench.secondarySideBar.defaultVisibility": "hidden",
-  "editor.scrollbar.verticalScrollbarSize": 10,
+  "window.zoomLevel": 0,
   "explorer.compactFolders": false,
   "explorer.confirmPasteNative": false,
   "explorer.decorations.colors": false,
-  "breadcrumbs.enabled": false,
-  "window.title": "🏗️ ${activeEditorShort} - ${folderName}",
-  // "window.density.editorTabHeight": "compact",
-  "window.commandCenter": false,
-  "workbench.tree.enableStickyScroll": false,
-  "workbench.panel.opensMaximized": "always",
-
-  /*
-  ---------------------------------------
-  ICONS / THEMES (EXTENSIONS)
-  ---------------------------------------
-  */
-  "catppuccin-noctis-icons.hidesExplorerArrows": true,
-  /*
-
-  ---------------------------------------
-  CUSTOM UI STYLES (EXTENSIONS)
-  ---------------------------------------
-  */
-  "custom-ui-style.font.sansSerif": "Dank Mono",
-
-  /*
-  ---------------------------------------
-  WORKBENCH THEME CUSTOMIZATION
-  ---------------------------------------
-  */
-  "everforest.darkWorkbench": "flat",
-
-  "workbench.colorCustomizations": {
-    "editor.findMatchBackground": "#593b48",
-    "editor.findMatchBorder": "#ed879633",
-    "editor.findMatchHighlightBackground": "#3e535fee",
-    "editor.findMatchHighlightBorder": "#91d7e333",
-    "editor.findRangeHighlightBackground": "#3e535fee",
-    "editor.findRangeHighlightBorder": "#91d7e333",
-    "editor.focusedStackFrameHighlightBackground": "#a6da9526",
-
-    "activityBar.border": "#3B4447",
-    "sideBar.border": "#3B4447",
-    "statusBar.border": "#3B4447",
-    "editorGroup.border": "#3B4447",
-    "editorGroupHeader.tabsBorder": "#3B4447",
-    "panel.border": "#3B4447",
-    "editorGroupHeader.border": "#3B4444",
-    "editor.background": "#293136",
-  },
-
-  /*
-  ---------------------------------------
-  REFERENCES & DATABASE CLIENT
-  ---------------------------------------
-  */
-  "references.preferredLocation": "view",
-
-  /*
-  ---------------------------------------
-  VIM EXTENSION SETTINGS
-  ---------------------------------------
-  */
-  "vim.enableNeovim": true,
+  "window.title": "${folderPath}",
+  "workbench.colorCustomizations": {},
   "vim.leader": "<space>",
   "vim.foldfix": true,
   "vim.textwidth": 200,
   "vim.useSystemClipboard": true,
-  "vim.hlsearch": true,
-
-  // HandleKeys (delegate to VSCode instead of Vim)
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false,
     "<C-p>": false,
     "<C-y>": false
   },
-
-  // Insert Mode Mappings
-  "vim.insertModeKeyBindings": [{ "before": ["j", "j"], "after": ["<Esc>"] }],
-
-  // Normal Mode Mappings
   "vim.normalModeKeyBindings": [
-    // HORIZONTAL NAVIGATION
-    { "before": ["H"], "after": ["^"] },
-    { "before": ["L"], "after": ["$"] },
-
-    { "before": ["<leader>", "w"], "commands": [":wq!"] },
-
-    // QUICK OPEN / SEARCH
     {
-      "before": ["leader", "leader"],
-      "commands": ["workbench.action.quickOpen"]
+      "before": ["<C-d>"],
+      "after": ["<C-d>", "z", "z"]
     },
     {
-      "before": ["leader", "e"],
-      "commands": ["workbench.action.showAllEditorsByMostRecentlyUsed"]
-    },
-
-    // FIND / REPLACE 
-    {
-      "before": ["leader", "f", "f"],
-      "commands": ["workbench.action.quickTextSearch"]
+      "before": ["<C-u>"],
+      "after": ["<C-u>", "z", "z"]
     },
     {
-      "before": ["<leader>", "f", "r"],
-      "commands": ["editor.action.startFindReplaceAction"]
+      "before": ["n"],
+      "after": ["n", "z", "z"]
     },
     {
-      "before": ["<leader>", "f", "s"],
-      "commands": ["workbench.action.findInFiles"]
-    },
-
-    // FORMAT DOCUMENT
-    {
-      "before": ["<leader>", "f", "d"],
-      "commands": ["editor.action.formatDocument"]
-    },
-
-    // BUFFER CLOSE
-    {
-      "before": ["leader", "b", "d"],
-      "commands": ["workbench.action.closeActiveEditor"]
-    },
-
-    {
-      "before": ["leader", "b", "o"],
-      "commands": ["workbench.action.closeOtherEditors"]
-    },
-
-    // CODE ACTIONS
-    {
-      "before": ["leader", "c", "a"],
-      "commands": ["editor.action.quickFix"]
-    },
-    {
-      "before": ["leader", "c", "r"],
-      "commands": ["editor.action.rename"]
-    },
-    {
-      "before": ["leader", "c", "s"],
-      "commands": ["workbench.action.gotoSymbol"]
-    },
-
-    // GO TO DEFINITION
-    {
-      "before": ["g", "d"],
-      "commands": ["editor.action.goToDeclaration"]
-    },
-    {
-      "before": ["g", "i"],
-      "commands": ["editor.action.goToImplementation"]
-    },
-    {
-      "before": ["g", "r"],
-      "commands": ["editor.action.referenceSearch.trigger"]
-    },
-
-    // SPLIT
-    { "before": ["leader", "v"], "commands": [":vsplit"] },
-    { "before": ["leader", "h"], "commands": [":split"] },
-
-    // BETTER SCROLLING
-    { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
-    { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
-
-    // KEEP CURSOR IN THE MIDDLE WHEN SEARCHING
-    { "before": ["n"], "after": ["n", "z", "z"] },
-    { "before": ["N"], "after": ["N", "z", "z"] },
-
-    // GO TO NEXT / PREV DIAGNOSTIC
-    { "before": ["]", "d"], "commands": ["editor.action.marker.next"] },
-    { "before": ["[", "d"], "commands": ["editor.action.marker.prev"] }
+      "before": ["N"],
+      "after": ["N", "z", "z"]
+    }
   ],
-
-  // Visual Mode Mappings
   "vim.visualModeKeyBindings": [
-    // INDENT / OUTDENT
-    { "before": [">"], "commands": ["editor.action.indentLines"] },
-    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
-
-    // MOVE LINES UP / DOWN
-    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
-    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    }
   ],
-
-  // Visual Mode Non-Recursive
   "vim.visualModeKeyBindingsNonRecursive": [
-    // PASTE WITHOUT OVERWRITING THE DEFAULT REGISTER
-    { "before": ["p"], "after": ["p", "g", "v", "y"] }
+    {
+      "before": ["p"],
+      "after": ["p", "g", "v", "y"]
+    }
   ],
-
-  // Extension Affinity (Performance)
-  "extensions.experimental.affinity": {
-    "vscodevim.vim": 1
-  },
-
-  /*
-  ---------------------------------------
-  LINTERS / LANGUAGE-SPECIFIC
-  ---------------------------------------
-  */
-  "css.lint.unknownAtRules": "ignore"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.minimap.enabled": false,
+  "window.commandCenter": false
 }
