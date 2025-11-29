@@ -1,8 +1,9 @@
 return {
+  { "webhooked/kanso.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight-night",
+      colorscheme = "kanso-ink",
     },
-  }
+  },
 }

@@ -46,3 +46,10 @@ keymap.set("n", "<C-S-j>", "<C-w>-")
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
+
+-- Toggle fold under cursor with Ctrl + M
+vim.keymap.set("n", "<C-m>", "za", {
+  noremap = true,
+  silent = true,
+  desc = "Toggle fold under cursor",
+})
