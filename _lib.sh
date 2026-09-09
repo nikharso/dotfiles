@@ -39,6 +39,8 @@ link_map() {
     "$root/claude/statusline.sh" "$HOME/.claude/statusline.sh" \
     "$root/claude/settings.json" "$HOME/.claude/settings.json" \
     "$root/nvim"                 "$HOME/.config/nvim" \
+    "$root/git/gitconfig"        "$HOME/.gitconfig" \
+    "$root/hunk/config.toml"     "$HOME/.config/hunk/config.toml" \
     "$root/zed/settings.json"    "$HOME/.config/zed/settings.json" \
     "$root/zed/keymap.json"      "$HOME/.config/zed/keymap.json" \
     "$root/vscode/settings.json" "$vsc/settings.json" \

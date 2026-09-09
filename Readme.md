@@ -61,6 +61,10 @@ claude/      themes/, settings.json,              -> ~/.claude/
              statusline.sh
 nvim/        LazyVim config (auto light/dark:     -> ~/.config/nvim
              maxx-mellow / -dawn)
+git/         gitconfig (hunk as diff viewer,      -> ~/.gitconfig
+             lg1 graph alias) + hunk-theme
+hunk/        config.toml — maxx-mellow /          -> ~/.config/hunk/
+             maxx-mellow-dawn palettes
 zed/         settings.json, keymap.json          -> ~/.config/zed/
 vscode/      settings.json, keybinds.json,       -> Code User dir
              extensions.md
