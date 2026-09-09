@@ -162,4 +162,5 @@
   "workbench.experimental.modernUI": false,
   "workbench.activityBar.location": "bottom",
   "workbench.colorTheme": "Cursor Dark",
+  "aws.cloudformation.telemetry.enabled": false,
 }
