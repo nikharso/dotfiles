@@ -58,15 +58,20 @@
 | `<leader>cd` | Line diagnostics           |
 
 
-| Key          | Action         |
-| ------------ | -------------- |
-| `<leader>gg` | Lazygit        |
-| `<leader>gb` | Git blame line |
-| `<leader>gB` | Browse repo    |
-| `<leader>gd` | Git diff       |
-| `<leader>gs` | Git status     |
-| `]h`         | Next hunk      |
-| `[h`         | Prev hunk      |
+| Key          | Action                                  |
+| ------------ | --------------------------------------- |
+| `<leader>gg` | Lazygit                                 |
+| `<leader>gb` | Git blame line                          |
+| `<leader>gB` | Browse repo                             |
+| `<leader>gd` | Git diff picker (snacks)                |
+| `<leader>gs` | Git status (all M/A/D/untracked files)  |
+| `]h`         | Next hunk                               |
+| `[h`         | Prev hunk                               |
+| `<leader>ghp`| Preview hunk inline (current buffer)    |
+| `<leader>ghs`| Stage hunk                              |
+| `<leader>ghr`| Reset hunk                              |
+| `<leader>ghd`| Diff this file vs index                 |
+| `<leader>ghD`| Diff this file vs HEAD~                 |
 
 | Key   | Action                |
 | ----- | --------------------- |

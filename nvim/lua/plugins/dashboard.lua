@@ -327,8 +327,7 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
       workspaces = {
-        { name = "personal", path = "~/personal/obsdn" },
-        { name = "svaraa", path = "~/work/svaraa/svaraa-docs" },
+        { name = "personal", path = "~/obsdn" },
       },
       ui = {
         enable = false, -- disable inline markdown rendering (checkboxes, bullets, etc.)
